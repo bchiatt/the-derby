@@ -1,7 +1,7 @@
 ## name of project
 ### Code Badges
-build status icon
-coverage status icon
+[![Build Status](https://travis-ci.org/bchiatt/the-derby.svg)](https://travis-ci.org/bchiatt/the-derby)
+[![Coverage Status](https://coveralls.io/repos/bchiatt/the-derby/badge.png)](https://coveralls.io/r/bchiatt/the-derby)
 
 ### About
 write a description about your project
