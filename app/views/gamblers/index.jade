@@ -1,0 +1,11 @@
+extends ../shared/template
+block content
+  h2 Gamblers Page!
+
+  #gamblers
+  each gambler in gamblers
+    include gambler
+
+block scripts
+  script(src='/js/user/gambler.js')
+

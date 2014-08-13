@@ -13,7 +13,9 @@ module.exports = function(app, express){
   app.use(methodOverride());
 
   app.get('/', home.index);
+
   app.get('/gamblers', gamblers.index);
+  app.delete('/gamblers/:id/assets/:name', gamblers.destroy);
 
   console.log('Routes Loaded');
 };
