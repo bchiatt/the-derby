@@ -1,0 +1,12 @@
+extends ../shared/template
+block content
+  h2 Show Gambler Page!
+
+  a(href='/gamblers/#{gambler._id}/assets/new') Add Asset
+
+  .gamblerShow
+  include gambler
+
+block scripts
+  script(src='/js/user/gambler.js')
+

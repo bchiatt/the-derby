@@ -1,0 +1,18 @@
+extends ../shared/template
+block content
+  h2 New Gambler Page!
+
+  .addGambler
+    form(method='post', action='/gamblers/new')
+      input(type='text', name='name', placeholder='name')
+      input(type='text', name='photo', placeholder='photo url')
+      label $
+      input(type='text', name='cash', placeholder='cash amount')
+      label Spouse
+      input(type='text', name='spouseName', placeholder='spouse name')
+      input(type='text', name='spousePhoto', placeholder='spouse photo url')
+      button Add Gambler
+
+block scripts
+  script(src='/js/user/gambler.js')
+

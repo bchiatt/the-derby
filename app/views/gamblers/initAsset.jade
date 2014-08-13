@@ -1,0 +1,15 @@
+extends ../shared/template
+block content
+  h2 Add an Asset Page!
+
+  .addAsset
+    form(method='post', action='/gamblers/#{id}/assets/new')
+      input(type='text', name='name', placeholder='name')
+      input(type='text', name='photo', placeholder='photo url')
+      label $
+      input(type='text', name='value', placeholder='asset value')
+      button Add Asset
+
+block scripts
+  script(src='/js/user/gambler.js')
+

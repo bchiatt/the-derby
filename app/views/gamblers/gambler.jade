@@ -2,7 +2,7 @@
   .couple
     .theGambler
       .gamblerPhoto(style='background-image: url(#{gambler.photo})')
-      .gamblerName= gambler.name
+      .gamblerName: a(href='/gamblers/#{gambler._id}')= gambler.name
     .theSpouse
       .spousePhoto(style='background-image: url(#{gambler.spouse.photo})')
       .spouseName= gambler.spouse.name
