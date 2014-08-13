@@ -30,7 +30,7 @@ describe('Person', function(){
     });
   });
 
-  describe('.save', function(){
+  describe('#save', function(){
     it('should save a gambler to the db', function(done){
       var wendy = new Gambler({name:'Wendy'});
       wendy.save(function(err, gambler){
@@ -62,9 +62,11 @@ describe('Person', function(){
   });
 
   describe('#removeAsset', function(){
-    it('should remove asset from gambler and add value to cash', function(done){
-      Gambler.all(function(err, asset){
-        done();
+    it('should remove asset from gambler and add value to cash', function(){
+      Gambler.findById('000000000000000000000003', function(gambler){
+        gambler.removeAsset({name:'tuxedo'});
+
+        expect(gambler.assets).to.have.length(1);
       });
     });
   });

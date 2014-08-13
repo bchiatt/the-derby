@@ -20,8 +20,10 @@ Gambler.prototype.save = function(cb){
   Gambler.collection.save(this, cb);
 };
 
-Gambler.prototype.removeAsset = function(cb){
-  Gambler.collection.find().toArray(cb);
+Gambler.prototype.removeAsset = function(o, cb){
+  var asset = _.remove(this.assets, function(asset){return asset.name === o.name;});
+
+  this.cash += asset[0].value * 1;
 };
 
 Gambler.all = function(cb){
