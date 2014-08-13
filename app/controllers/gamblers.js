@@ -13,7 +13,7 @@ exports.destroy = function(req, res){
     gambler.removeAsset(req.params.name);
     var isDivorced = !this.assets ? true : false;
     gambler.save(function(err, gambler){
-      res.send('gamblers/index', {id: req.params.id, name: req.params.name, isDivorced: isDivorced, cash: this.cash});
+      res.send('gamblers/index', {id: req.params.id, name: req.params.name, isDivorced: isDivorced, cash: gambler.cash});
     });
   });
 };

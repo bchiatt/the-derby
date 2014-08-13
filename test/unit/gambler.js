@@ -67,6 +67,7 @@ describe('Person', function(){
         gambler.removeAsset({name:'tuxedo'});
 
         expect(gambler.assets).to.have.length(1);
+        expect(gambler.cash).to.equal(5400);
       });
     });
   });
