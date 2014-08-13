@@ -1,15 +1,15 @@
 'use strict';
 
-function Person(){
+function Gambler(){
 }
 
-Object.defineProperty(Person, 'collection', {
-  get: function(){return global.mongodb.collection('people');}
+Object.defineProperty(Gambler, 'collection', {
+  get: function(){return global.mongodb.collection('gamblers');}
 });
 
-Person.all = function(cb){
-  Person.collection.find().toArray(cb);
+Gambler.all = function(cb){
+  Gambler.collection.find().toArray(cb);
 };
 
-module.exports = Person;
+module.exports = Gambler;
 
