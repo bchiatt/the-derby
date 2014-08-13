@@ -5,11 +5,11 @@ var _     = require('lodash'),
 
 function Gambler(o){
   this.name    = o.name;
-  //this.spouse  = o.spouse;
-  //this.photo   = o.photo;
-  //this.cash    = o.cash;
-  //this.assets  = o.assets;
-  //this.results = o.results;
+  this.spouse  = {name:o.spouseName, photo:o.spousePhoto};
+  this.photo   = o.photo;
+  this.cash    = parseFloat(o.cash);
+  this.assets  = [];
+  this.results = {wins:0, losses:0};
 }
 
 Object.defineProperty(Gambler, 'collection', {
@@ -20,9 +20,12 @@ Gambler.prototype.save = function(cb){
   Gambler.collection.save(this, cb);
 };
 
+Gambler.prototype.addAsset = function(o){
+  this.assets.push({name:o.name, photo:o.photo, value:parseFloat(o.value)});
+};
+
 Gambler.prototype.removeAsset = function(o, cb){
   var asset = _.remove(this.assets, function(asset){return asset.name === o.name;});
-
   this.cash += asset[0].value * 1;
 };
 

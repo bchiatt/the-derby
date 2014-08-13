@@ -25,8 +25,18 @@ describe('Person', function(){
 
   describe('constructor', function(){
     it('should create a new Gambler object', function(){
-      //var p = new Gamlber();
-      //expect(p).to.be.instanceof(Gamber);
+      var o = {name:'Erica', photo:'example.com', cash:'5005', spouseName:'Billy', spousePhoto:'google.com'},
+          g = new Gambler(o);
+
+      expect(g).to.be.instanceof(Gambler);
+      expect(g.name).to.equal('Erica');
+      expect(g.photo).to.equal('example.com');
+      expect(g.cash).to.equal(5005);
+      expect(g.spouse.name).to.equal('Billy');
+      expect(g.spouse.photo).to.equal('google.com');
+      expect(g.assets).to.have.length(0);
+      expect(g.results.wins).to.equal(0);
+      expect(g.results.losses).to.equal(0);
     });
   });
 
@@ -68,6 +78,20 @@ describe('Person', function(){
 
         expect(gambler.assets).to.have.length(1);
         expect(gambler.cash).to.equal(5400);
+      });
+    });
+  });
+
+  describe('#addAsset', function(){
+    it('should add asset to gambler', function(){
+      var o = {name:'Astin Martin', photo:'geocities.com', value:'90000'};
+      Gambler.findById('000000000000000000000003', function(gambler){
+        gambler.addAsset(o);
+
+        expect(gambler.assets).to.have.length(3);
+        expect(gambler.assets[2].name).to.equal('Astin Martin');
+        expect(gambler.assets[2].photo).to.equal('geocities.com');
+        expect(gambler.assets[2].value).to.equal(90000);
       });
     });
   });
