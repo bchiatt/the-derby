@@ -3,9 +3,10 @@
     .theGambler
       .gamblerPhoto(style='background-image: url(#{gambler.photo})')
       .gamblerName: a(href='/gamblers/#{gambler._id}')= gambler.name
-    .theSpouse
-      .spousePhoto(style='background-image: url(#{gambler.spouse.photo})')
-      .spouseName= gambler.spouse.name
+    if gambler.assets.length
+      .theSpouse
+        .spousePhoto(style='background-image: url(#{gambler.spouse.photo})')
+        .spouseName= gambler.spouse.name
   .cash Cash: $#{parseFloat(gambler.cash).toFixed(2)}
   .results
     .wins Wins: #{gambler.results.wins}
@@ -17,6 +18,3 @@
       .asset(style='background-image: url(#{asset.photo})')
         .assetName: a(href='#')= asset.name
         .assetValue $#{parseFloat(asset.value).toFixed(2)}
-
-block scripts
-  script(src='/js/user/gambler.js')

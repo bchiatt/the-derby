@@ -24,8 +24,8 @@ Gambler.prototype.addAsset = function(o){
   this.assets.push({name:o.name, photo:o.photo, value:parseFloat(o.value)});
 };
 
-Gambler.prototype.removeAsset = function(o, cb){
-  var asset = _.remove(this.assets, function(asset){return asset.name === o.name;});
+Gambler.prototype.removeAsset = function(name){
+  var asset = _.remove(this.assets, function(asset){return asset.name === name;});
   this.cash += asset[0].value * 1;
 };
 

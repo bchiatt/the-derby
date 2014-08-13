@@ -74,7 +74,7 @@ describe('Person', function(){
   describe('#removeAsset', function(){
     it('should remove asset from gambler and add value to cash', function(){
       Gambler.findById('000000000000000000000003', function(gambler){
-        gambler.removeAsset({name:'tuxedo'});
+        gambler.removeAsset('tuxedo');
 
         expect(gambler.assets).to.have.length(1);
         expect(gambler.cash).to.equal(5400);

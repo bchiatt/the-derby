@@ -8,12 +8,13 @@ exports.index = function(req, res){
   });
 };
 
-exports.destroy = function(req, res){
-  Gambler.findById(req.params.id, function(gambler){
+exports.sellAsset = function(req, res){
+  Gambler.findById(req.params.id, function(err, gambler){
     gambler.removeAsset(req.params.name);
     var isDivorced = !this.assets ? true : false;
-    gambler.save(function(err, gambler){
-      res.send('gamblers/index', {id: req.params.id, name: req.params.name, isDivorced: isDivorced, cash: gambler.cash});
+    console.log(gambler);
+    gambler.save(function(){
+      res.send({id: req.params.id, name: req.params.name, isDivorced: isDivorced, cash: gambler.cash});
     });
   });
 };
