@@ -1,0 +1,40 @@
+{
+  "_id":{"$oid":"000000000000000000000001"},
+  "name":"The Clyde",
+  "spouse":{"name":"The Bonnie", "photo":"http://upload.wikimedia.org/wikipedia/commons/a/a3/Bonnie_Parker_BC10.jpg"},
+  "photo":"http://en.wikipedia.org/wiki/Bonnie_and_Clyde#mediaviewer/File:Clyde_Champion_Barrow_Mug_Shot_-_Dallas_6048.jpg",
+  "cash":100000,
+  "assets":[{"name":"guns", "photo":"http://upload.wikimedia.org/wikipedia/commons/7/73/BonnieParkerCigar1933.jpg", "value":150}, {"name":"car w/guns", "photo":"http://upload.wikimedia.org/wikipedia/commons/a/a8/WDJonesAndGuns1933.jpg", "value":500}],
+  "results":{"wins": 7, "losses": 3}
+}
+
+{
+  "_id":{"$oid":"000000000000000000000002"},
+  "name":"Danny Ocean",
+  "spouse":{"name":"Tess Ocean", "photo":"http://media1.onsugar.com/files/2012/10/43/4/192/1922283/159b5fe66e41fb95_Oceans_12.jpeg"},
+  "photo":"http://images.sodahead.com/polls/000263451/polls_Cloony_2_1017_868654_answer_1_xlarge.jpeg",
+  "cash":25000,
+  "assets":[{"name":"wedding ring", "photo":"http://www.weddingsofjoy.com/wp-content/uploads/2014/02/tiffany_wedding_rings.jpg", "value":20000}, {"name":"tuxedo", "photo":"http://i.stpost.com/lauren-by-ralph-lauren-tuxedo-wool-for-men-in-black~p~4910k_01~1500.3.jpg", "value":5000}],
+  "results":{"wins": 10, "losses": 0}
+}
+
+{
+  "_id":{"$oid":"000000000000000000000003"},
+  "name":"James Bond",
+  "spouse":{"name":"All Of'em", "photo":"http://www.featurepics.com/FI/Thumb300/20080506/Vintage-Fashion-Dummy-715467.jpg"},
+  "photo":"http://cdn.destructoid.com//ul/268652-JamesBondWide_620x350.jpg",
+  "cash":400,
+  "assets":[{"name":"pp7", "photo":"http://www.007museum.com/Walther_PPK_BOND.jpg", "value":2007}, {"name":"tuxedo", "photo":"http://i.stpost.com/lauren-by-ralph-lauren-tuxedo-wool-for-men-in-black~p~4910k_01~1500.3.jpg", "value":5000}],
+  "results":{"wins": 5, "losses": 4}
+}
+
+{
+  "_id":{"$oid":"000000000000000000000004"},
+  "name":"Psy",
+  "spouse":{"name":"Yoo Hye-yeon", "photo":"http://www.hancinema.net/photos/photo262929.jpg"},
+  "photo":"http://www.adventured.com/wp-content/uploads/psy-300x300.jpg",
+  "cash":4000000,
+  "assets":[{"name":"sunglasses", "photo":"http://ecx.images-amazon.com/images/I/51xQoiq1UBL._SX342_.jpg", "value":25}, {"name":"tuxedo", "photo":"http://i.stpost.com/lauren-by-ralph-lauren-tuxedo-wool-for-men-in-black~p~4910k_01~1500.3.jpg", "value":3000}],
+  "results":{"wins": 0, "losses": 9}
+}
+
